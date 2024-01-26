@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:test_massenger/core/theme/app_text_style.dart';
 import 'package:test_massenger/core/utils/app_utils.dart';
 
@@ -7,7 +8,7 @@ class MainAppBarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SliverAppBar(
+    return SliverAppBar(
       floating: false,
       pinned: true,
       bottom: PreferredSize(
@@ -16,14 +17,15 @@ class MainAppBarWidget extends StatelessWidget {
             child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "Чаты",
                   style: AppTextStyle.appBarText,
                 ),
                 AppUtils.kBoxHeight6,
                 TextField(
                         decoration: InputDecoration(
-                border: OutlineInputBorder()
+                          prefixIcon: SvgPicture.asset("assets/svg/ic_search.svg"),
+                border: const OutlineInputBorder()
                         )
                       ),
               ],
