@@ -8,6 +8,7 @@ class AppColors{
   static const darkGray = Color(0xFF5E7A90);
   static const green = Color(0xFF1FDB5F);
   static const hintColor = Color(0xFF9DB7CB);
+  static const selectedItemColor = Color(0xFF0B2B5E);
 }
 
 class ThemeColors {
